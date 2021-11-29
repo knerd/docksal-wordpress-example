@@ -1,0 +1,29 @@
+{
+  "name": "xp/wistia-plugin",
+  "description": "Custom wistia plugin that only shows full videos to logged in users.",
+  "type": "project",
+  "authors": [{
+    "name": "xophz",
+    "email": "cdpollard@gmail.com"
+  }],
+  "minimum-stability": "dev",
+  "require": {
+    "johnpbloch/wordpress": "^5.8",
+    "xopherdeep/wistia-video-plugin": "dev-main",
+    "composer/installers": "2.x-dev"
+  },
+  "repositories": {
+    "xopherdeep/wistia-video-plugin":{
+     "type": "vcs",
+      "url": "git@github.com:xopherdeep/wistia-video-plugin"
+    }
+  },
+  "extra": {
+    "wordpress-install-dir": "public",
+    "installer-paths": {
+      "public/wp-content/plugins/{$name}": [
+        "type:wordpress-plugin"
+      ]
+    }
+  }
+}
