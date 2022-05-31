@@ -1,0 +1,12 @@
+#!/usr/bin/env bash
+
+# generate cert for a project
+fin addon install mkcert -g
+fin mkcert create
+
+# reset vhost-proxy to pick-up the new cert
+fin system reset vhost-proxy
+fin project restart
+
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+mkcert -install
