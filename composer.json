@@ -1,29 +1,60 @@
 {
-  "name": "xp/wistia-plugin",
-  "description": "Custom wistia plugin that only shows full videos to logged in users.",
+  "name": "knerd/docksal-wordpress-example",
+  "description": "Example config utilizing composer and docksal to create a running local WP environment",
+  "version": "1.0.0",
   "type": "project",
   "authors": [{
     "name": "xophz",
-    "email": "cdpollard@gmail.com"
+    "email": "contact@midnightnerd.com"
   }],
   "minimum-stability": "dev",
   "require": {
-    "johnpbloch/wordpress": "^5.8",
-    "xopherdeep/wistia-video-plugin": "dev-main",
-    "composer/installers": "2.x-dev"
+    "johnpbloch/wordpress": "*",
+    "knerd/wp-config": "*",
+    "wpackagist-plugin/index-wp-mysql-for-speed": "*",
+    "wpackagist-plugin/redis-cache": "*",
+    "wpackagist-theme/twentytwentytwo": "*"
   },
   "repositories": {
-    "xopherdeep/wistia-video-plugin":{
-     "type": "vcs",
-      "url": "git@github.com:xopherdeep/wistia-video-plugin"
+    "wpackagist": {
+      "type": "composer",
+      "url": "https://wpackagist.org"
+    },
+    "knerd/wp-config":{
+      "type": "vcs",
+      "url": "git@github.com:knerd/wp-config"
     }
   },
   "extra": {
-    "wordpress-install-dir": "public",
+    "wordpress-install-dir": "public/wp",
     "installer-paths": {
       "public/wp-content/plugins/{$name}": [
         "type:wordpress-plugin"
+      ],
+      "public/wp-content/themes/{$name}": [
+        "type:wordpress-theme"
       ]
     }
+  },
+  "config": {
+    "allow-plugins": {
+      "composer/installers": true,
+      "johnpbloch/wordpress-core-installer": true,
+      "koodimonni/composer-dropin-installer": true
+    },
+    "preferred-install": {
+        "knerd/*": "source",
+        "*": "dist"
+    }
+  },
+  "scripts": {
+    "post-update-cmd": "@move-wp",
+    "post-install-cmd": "@move-wp",
+    "move-wp": [
+      "# WordPress installed to public/wp - moving to public/...",
+      "rm public/wp/wp-content -rf",
+      "rsync -ra --remove-source-files public/wp/* ./public",
+      "rm public/wp -rf"
+    ]
   }
 }

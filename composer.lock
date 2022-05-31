@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "e3da6ea08cd6eac0566aa360d5cac8e6",
+    "content-hash": "2a9e2191f5aea3e2c02b02ef8e3f15f9",
     "packages": [
         {
             "name": "composer/installers",
@@ -12,12 +12,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/composer/installers.git",
-                "reference": "a241e78aaeb09781f5f5b92ac01ffd13ab43e5e8"
+                "reference": "af93ba6e52236418f07a278033eba6959ee5b983"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/composer/installers/zipball/a241e78aaeb09781f5f5b92ac01ffd13ab43e5e8",
-                "reference": "a241e78aaeb09781f5f5b92ac01ffd13ab43e5e8",
+                "url": "https://api.github.com/repos/composer/installers/zipball/af93ba6e52236418f07a278033eba6959ee5b983",
+                "reference": "af93ba6e52236418f07a278033eba6959ee5b983",
                 "shasum": ""
             },
             "require": {
@@ -32,12 +32,14 @@
                 "symfony/phpunit-bridge": "^5.3",
                 "symfony/process": "^5"
             },
+            "default-branch": true,
             "type": "composer-plugin",
             "extra": {
                 "class": "Composer\\Installers\\Plugin",
                 "branch-alias": {
                     "dev-main": "2.x-dev"
-                }
+                },
+                "plugin-modifies-install-path": true
             },
             "autoload": {
                 "psr-4": {
@@ -129,6 +131,10 @@
                 "zend",
                 "zikula"
             ],
+            "support": {
+                "issues": "https://github.com/composer/installers/issues",
+                "source": "https://github.com/composer/installers/tree/v2.1.1"
+            },
             "funding": [
                 {
                     "url": "https://packagist.com",
@@ -143,27 +149,28 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2021-09-13T08:21:20+00:00"
+            "time": "2022-04-13T09:13:00+00:00"
         },
         {
             "name": "johnpbloch/wordpress",
-            "version": "5.8.x-dev",
+            "version": "dev-master",
             "source": {
                 "type": "git",
                 "url": "https://github.com/johnpbloch/wordpress.git",
-                "reference": "64beff09ac8e95afc760f62fe26f3c84b46e2363"
+                "reference": "791215d9f8fb9b8c9949f3993d01c25ebf2a84e1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/johnpbloch/wordpress/zipball/64beff09ac8e95afc760f62fe26f3c84b46e2363",
-                "reference": "64beff09ac8e95afc760f62fe26f3c84b46e2363",
+                "url": "https://api.github.com/repos/johnpbloch/wordpress/zipball/791215d9f8fb9b8c9949f3993d01c25ebf2a84e1",
+                "reference": "791215d9f8fb9b8c9949f3993d01c25ebf2a84e1",
                 "shasum": ""
             },
             "require": {
-                "johnpbloch/wordpress-core": "5.8.x-dev",
+                "johnpbloch/wordpress-core": "dev-master",
                 "johnpbloch/wordpress-core-installer": "^1.0 || ^2.0",
                 "php": ">=5.6.20"
             },
+            "default-branch": true,
             "type": "package",
             "notification-url": "https://packagist.org/downloads/",
             "license": [
@@ -172,30 +179,37 @@
             "authors": [
                 {
                     "name": "WordPress Community",
-                    "homepage": "http://wordpress.org/about/"
+                    "homepage": "https://wordpress.org/about/"
                 }
             ],
             "description": "WordPress is open source software you can use to create a beautiful website, blog, or app.",
-            "homepage": "http://wordpress.org/",
+            "homepage": "https://wordpress.org/",
             "keywords": [
                 "blog",
                 "cms",
                 "wordpress"
             ],
-            "time": "2021-06-30T04:12:28+00:00"
+            "support": {
+                "docs": "https://developer.wordpress.org/",
+                "forum": "https://wordpress.org/support/",
+                "irc": "irc://irc.freenode.net/wordpress",
+                "issues": "https://core.trac.wordpress.org/",
+                "source": "https://core.trac.wordpress.org/browser"
+            },
+            "time": "2022-03-01T15:13:50+00:00"
         },
         {
             "name": "johnpbloch/wordpress-core",
-            "version": "5.8.x-dev",
+            "version": "dev-master",
             "source": {
                 "type": "git",
                 "url": "https://github.com/johnpbloch/wordpress-core.git",
-                "reference": "4443303cb9e9963dd3fe4d93730f9d25dfb2ce4a"
+                "reference": "077a2a0d8a7484713207825f14266e7dcc865ff1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/johnpbloch/wordpress-core/zipball/4443303cb9e9963dd3fe4d93730f9d25dfb2ce4a",
-                "reference": "4443303cb9e9963dd3fe4d93730f9d25dfb2ce4a",
+                "url": "https://api.github.com/repos/johnpbloch/wordpress-core/zipball/077a2a0d8a7484713207825f14266e7dcc865ff1",
+                "reference": "077a2a0d8a7484713207825f14266e7dcc865ff1",
                 "shasum": ""
             },
             "require": {
@@ -203,8 +217,9 @@
                 "php": ">=5.6.20"
             },
             "provide": {
-                "wordpress/core-implementation": "5.8.x-dev"
+                "wordpress/core-implementation": "dev-master"
             },
+            "default-branch": true,
             "type": "wordpress-core",
             "notification-url": "https://packagist.org/downloads/",
             "license": [
@@ -223,7 +238,14 @@
                 "cms",
                 "wordpress"
             ],
-            "time": "2021-11-10T17:15:21+00:00"
+            "support": {
+                "forum": "https://wordpress.org/support/",
+                "irc": "irc://irc.freenode.net/wordpress",
+                "issues": "https://core.trac.wordpress.org/",
+                "source": "https://core.trac.wordpress.org/browser",
+                "wiki": "https://codex.wordpress.org/"
+            },
+            "time": "2022-05-30T15:15:20+00:00"
         },
         {
             "name": "johnpbloch/wordpress-core-installer",
@@ -273,47 +295,96 @@
             "keywords": [
                 "wordpress"
             ],
+            "support": {
+                "issues": "https://github.com/johnpbloch/wordpress-core-installer/issues",
+                "source": "https://github.com/johnpbloch/wordpress-core-installer/tree/master"
+            },
             "time": "2020-04-16T21:44:57+00:00"
         },
         {
-            "name": "xopherdeep/wistia-video-plugin",
-            "version": "dev-main",
+            "name": "knerd/wp-config",
+            "version": "dev-master",
             "source": {
                 "type": "git",
-                "url": "https://github.com/xopherdeep/wistia-video-plugin.git",
-                "reference": "eec8b7542f5c6e2850ac79ae30fd0310ebddecf3"
+                "url": "https://github.com/Knerd/wp-config.git",
+                "reference": "c651d63084f72032e478177b9f1402f6b072abd4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/xopherdeep/wistia-video-plugin/zipball/eec8b7542f5c6e2850ac79ae30fd0310ebddecf3",
-                "reference": "eec8b7542f5c6e2850ac79ae30fd0310ebddecf3",
+                "url": "https://api.github.com/repos/Knerd/wp-config/zipball/c651d63084f72032e478177b9f1402f6b072abd4",
+                "reference": "c651d63084f72032e478177b9f1402f6b072abd4",
                 "shasum": ""
             },
-            "type": "wordpress-plugin",
-            "authors": [
-                {
-                    "name": "xopherdeep",
-                    "email": "cdpollard@gmail.com"
-                }
-            ],
-            "description": "Simple wistia plugin that only allows the first minute of the video to play for anonymous users",
+            "default-branch": true,
+            "type": "library",
             "support": {
-                "source": "https://github.com/xopherdeep/wistia-video-plugin/tree/main",
-                "issues": "https://github.com/xopherdeep/wistia-video-plugin/issues"
+                "source": "https://github.com/Knerd/wp-config/tree/v0.0.4",
+                "issues": "https://github.com/Knerd/wp-config/issues"
             },
-            "time": "2021-11-29T21:47:03+00:00"
+            "time": "2021-05-22T00:18:34+00:00"
+        },
+        {
+            "name": "wpackagist-plugin/index-wp-mysql-for-speed",
+            "version": "1.4.4",
+            "source": {
+                "type": "svn",
+                "url": "https://plugins.svn.wordpress.org/index-wp-mysql-for-speed/",
+                "reference": "tags/1.4.4"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://downloads.wordpress.org/plugin/index-wp-mysql-for-speed.1.4.4.zip"
+            },
+            "require": {
+                "composer/installers": "^1.0 || ^2.0"
+            },
+            "type": "wordpress-plugin",
+            "homepage": "https://wordpress.org/plugins/index-wp-mysql-for-speed/"
+        },
+        {
+            "name": "wpackagist-plugin/redis-cache",
+            "version": "2.0.26",
+            "source": {
+                "type": "svn",
+                "url": "https://plugins.svn.wordpress.org/redis-cache/",
+                "reference": "tags/2.0.26"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://downloads.wordpress.org/plugin/redis-cache.2.0.26.zip"
+            },
+            "require": {
+                "composer/installers": "^1.0 || ^2.0"
+            },
+            "type": "wordpress-plugin",
+            "homepage": "https://wordpress.org/plugins/redis-cache/"
+        },
+        {
+            "name": "wpackagist-theme/twentytwentytwo",
+            "version": "1.2",
+            "source": {
+                "type": "svn",
+                "url": "https://themes.svn.wordpress.org/twentytwentytwo/",
+                "reference": "1.2"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://downloads.wordpress.org/theme/twentytwentytwo.1.2.zip"
+            },
+            "require": {
+                "composer/installers": "^1.0 || ^2.0"
+            },
+            "type": "wordpress-theme",
+            "homepage": "https://wordpress.org/themes/twentytwentytwo/"
         }
     ],
     "packages-dev": [],
     "aliases": [],
     "minimum-stability": "dev",
-    "stability-flags": {
-        "xopherdeep/wistia-video-plugin": 20,
-        "composer/installers": 20
-    },
+    "stability-flags": [],
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": [],
     "platform-dev": [],
-    "plugin-api-version": "1.1.0"
+    "plugin-api-version": "2.3.0"
 }
