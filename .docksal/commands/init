@@ -2,3 +2,9 @@
 
 fin project rm -f
 fin project start
+
+fin composer install
+fin init.wp
+fin wp plugin activate redis-cache
+fin wp redis enable
+fin wp redis status 
