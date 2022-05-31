@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+HOST=$(fin config get VIRTUAL_HOST)
+TITLE="Docksal WordPress Example"
+ADMIN=knerd
+EMAIL=contact@midnightnerd.com
+PASS=password
+fin wp core install --url="${HOST}" --title="${TITLE}" --admin_user="${ADMIN}" --admin_email="${EMAIL}" --admin_password="${PASS}"
