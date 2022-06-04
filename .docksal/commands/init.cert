@@ -1,4 +1,7 @@
 #!/usr/bin/env bash
+## Install mkcert, create signed cert, trust cert 
+#
+## Usage fin init.cert
 
 # generate cert for a project
 fin addon install mkcert -g

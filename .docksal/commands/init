@@ -1,10 +1,13 @@
 #!/usr/bin/env bash
+## Initiate Project 
+#
+## Usage fin init.wp
 
 fin project rm -f
 fin project start
 
+# Install packages from composer.json
 fin composer install
+
+# Run WordPress init script
 fin init.wp
-fin wp plugin activate redis-cache
-fin wp redis enable
-fin wp redis status 

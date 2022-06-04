@@ -1,7 +1,25 @@
 #!/usr/bin/env bash
+## Install WordPress, Activate Plugins, Optimize setup
+#
+## Usage fin init.wp
+
+# SETTINGS
 HOST=$(fin config get VIRTUAL_HOST)
 TITLE="Docksal WordPress Example"
 ADMIN=knerd
 EMAIL=contact@midnightnerd.com
 PASS=password
+
+# INSTALL WORDPRESS
 fin wp core install --url="${HOST}" --title="${TITLE}" --admin_user="${ADMIN}" --admin_email="${EMAIL}" --admin_password="${PASS}"
+
+# ACTIVATE PLUGINS 
+fin wp plugin activate redis-cache index-wp-mysql-for-speed
+
+# ENABLE REDIS CACHE
+fin wp redis enable
+fin wp redis status 
+
+# OPTIMIZE DB W/ HIGH PERFORMANCE KEYS
+fin wp index-mysql enable --all 
+fin wp index-mysql status 
