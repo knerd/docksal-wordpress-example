@@ -21,10 +21,10 @@ services:
       - WP_CONTENT
       - VIRTUAL_HOST
     # Map local host machine's ports to cli's container ports
-    ports:
-      # BrowserSync & UI
-      - '3000:3000'
-      - '3001:3001'
+    # ports:
+    #   # BrowserSync & UI
+    #   - '3000:3000'
+    #   - '3001:3001'
 
   # Database Container
   db:
