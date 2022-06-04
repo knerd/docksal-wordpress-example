@@ -1,5 +1,4 @@
 Default wordpress installed created with composer and docksal.
 
 use
-  composer install
-  fin start
+  fin init
