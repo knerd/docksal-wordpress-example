@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "2a9e2191f5aea3e2c02b02ef8e3f15f9",
+    "content-hash": "66a9f5196108b14e5595b7a94fa2eb5d",
     "packages": [
         {
             "name": "composer/installers",
@@ -153,24 +153,23 @@
         },
         {
             "name": "johnpbloch/wordpress",
-            "version": "dev-master",
+            "version": "5.9.x-dev",
             "source": {
                 "type": "git",
                 "url": "https://github.com/johnpbloch/wordpress.git",
-                "reference": "791215d9f8fb9b8c9949f3993d01c25ebf2a84e1"
+                "reference": "e140b6d496f7286c06470032382a528db64fd7cf"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/johnpbloch/wordpress/zipball/791215d9f8fb9b8c9949f3993d01c25ebf2a84e1",
-                "reference": "791215d9f8fb9b8c9949f3993d01c25ebf2a84e1",
+                "url": "https://api.github.com/repos/johnpbloch/wordpress/zipball/e140b6d496f7286c06470032382a528db64fd7cf",
+                "reference": "e140b6d496f7286c06470032382a528db64fd7cf",
                 "shasum": ""
             },
             "require": {
-                "johnpbloch/wordpress-core": "dev-master",
+                "johnpbloch/wordpress-core": "5.9.x-dev",
                 "johnpbloch/wordpress-core-installer": "^1.0 || ^2.0",
                 "php": ">=5.6.20"
             },
-            "default-branch": true,
             "type": "package",
             "notification-url": "https://packagist.org/downloads/",
             "license": [
@@ -179,37 +178,37 @@
             "authors": [
                 {
                     "name": "WordPress Community",
-                    "homepage": "https://wordpress.org/about/"
+                    "homepage": "http://wordpress.org/about/"
                 }
             ],
             "description": "WordPress is open source software you can use to create a beautiful website, blog, or app.",
-            "homepage": "https://wordpress.org/",
+            "homepage": "http://wordpress.org/",
             "keywords": [
                 "blog",
                 "cms",
                 "wordpress"
             ],
             "support": {
-                "docs": "https://developer.wordpress.org/",
-                "forum": "https://wordpress.org/support/",
+                "forum": "http://wordpress.org/support/",
                 "irc": "irc://irc.freenode.net/wordpress",
-                "issues": "https://core.trac.wordpress.org/",
-                "source": "https://core.trac.wordpress.org/browser"
+                "issues": "http://core.trac.wordpress.org/",
+                "source": "http://core.trac.wordpress.org/browser",
+                "wiki": "http://codex.wordpress.org/"
             },
-            "time": "2022-03-01T15:13:50+00:00"
+            "time": "2022-01-04T21:10:00+00:00"
         },
         {
             "name": "johnpbloch/wordpress-core",
-            "version": "dev-master",
+            "version": "5.9.x-dev",
             "source": {
                 "type": "git",
                 "url": "https://github.com/johnpbloch/wordpress-core.git",
-                "reference": "077a2a0d8a7484713207825f14266e7dcc865ff1"
+                "reference": "35a2b47e86c252986c1d7e5bfbd5b5959a116243"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/johnpbloch/wordpress-core/zipball/077a2a0d8a7484713207825f14266e7dcc865ff1",
-                "reference": "077a2a0d8a7484713207825f14266e7dcc865ff1",
+                "url": "https://api.github.com/repos/johnpbloch/wordpress-core/zipball/35a2b47e86c252986c1d7e5bfbd5b5959a116243",
+                "reference": "35a2b47e86c252986c1d7e5bfbd5b5959a116243",
                 "shasum": ""
             },
             "require": {
@@ -217,9 +216,8 @@
                 "php": ">=5.6.20"
             },
             "provide": {
-                "wordpress/core-implementation": "dev-master"
+                "wordpress/core-implementation": "5.9.x-dev"
             },
-            "default-branch": true,
             "type": "wordpress-core",
             "notification-url": "https://packagist.org/downloads/",
             "license": [
@@ -245,7 +243,7 @@
                 "source": "https://core.trac.wordpress.org/browser",
                 "wiki": "https://codex.wordpress.org/"
             },
-            "time": "2022-05-30T15:15:20+00:00"
+            "time": "2022-05-04T11:49:03+00:00"
         },
         {
             "name": "johnpbloch/wordpress-core-installer",
@@ -303,25 +301,24 @@
         },
         {
             "name": "knerd/wp-config",
-            "version": "dev-master",
+            "version": "v1.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Knerd/wp-config.git",
-                "reference": "c651d63084f72032e478177b9f1402f6b072abd4"
+                "reference": "4502a75b212cf37926ed11f349351ddfb67951ce"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Knerd/wp-config/zipball/c651d63084f72032e478177b9f1402f6b072abd4",
-                "reference": "c651d63084f72032e478177b9f1402f6b072abd4",
+                "url": "https://api.github.com/repos/Knerd/wp-config/zipball/4502a75b212cf37926ed11f349351ddfb67951ce",
+                "reference": "4502a75b212cf37926ed11f349351ddfb67951ce",
                 "shasum": ""
             },
-            "default-branch": true,
             "type": "library",
             "support": {
-                "source": "https://github.com/Knerd/wp-config/tree/v0.0.4",
+                "source": "https://github.com/Knerd/wp-config/tree/v1.0.0",
                 "issues": "https://github.com/Knerd/wp-config/issues"
             },
-            "time": "2021-05-22T00:18:34+00:00"
+            "time": "2022-06-04T01:24:19+00:00"
         },
         {
             "name": "wpackagist-plugin/index-wp-mysql-for-speed",
