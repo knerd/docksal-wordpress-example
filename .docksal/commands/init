@@ -10,4 +10,4 @@ fin project start
 fin composer install
 
 # Run WordPress init script
-fin init.wp
+fin init.wp -y

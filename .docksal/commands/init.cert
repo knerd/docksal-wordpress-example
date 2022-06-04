@@ -3,13 +3,44 @@
 #
 ## Usage fin init.cert
 
-# generate cert for a project
-fin addon install mkcert -g
-fin mkcert create
+#-------------------------- HELPER FUNCTIONS --------------------------------
+  source ${PROJECT_ROOT}/.docksal/bin/helpers
+#-------------------------- END: HELPER FUNCTIONS --------------------
 
-# reset vhost-proxy to pick-up the new cert
-fin system reset vhost-proxy
-fin project restart
+#-------------------------- FUNCTIONS --------------------------------
+  function installHomebrew(){
+    # INSTALL HOMEBREW
+    /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+    # INSTALL mkcert certs 
+    mkcert -install
+  }
 
-/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
-mkcert -install
+  function installAddon(){
+    fin addon install mkcert -g
+  }
+
+  function createCert(){
+    # generate cert for a project
+    fin mkcert create
+  }
+
+  function resetProject(){
+    # reset vhost-proxy to pick-up the new cert
+    fin project restart
+    fin system reset vhost-proxy
+  }
+#-------------------------- END: FUNCTIONS --------------------------------
+
+#-------------------------- EXECUTION --------------------------------
+  Q="Do you want install Homebrew & mkcert"
+  askYN "$Q" installHomebrew
+
+  Q="Do you want install the mkcert addon"
+  askYN "$Q" installAddon
+
+  Q="Do you want create a cert"
+  askYN "$Q" createCert 
+
+  Q="Do you want restart your project"
+  askYN "$Q" resetProject 
+#-------------------------- END: EXECUTION --------------------------------
