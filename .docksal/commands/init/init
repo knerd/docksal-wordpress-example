@@ -1,0 +1,16 @@
+#!/usr/bin/env bash
+## Initialize stack and site (full reset)
+#
+## Usage fin init
+
+# REMOVE PROJECT
+fin project rm -f
+
+# START PROJECT
+fin project start
+
+# INSTALL PACKAGES FROM COMPOSER.JSON
+fin composer install
+
+# RUN WORDPRESS INIT SCRIPT
+fin init/wp -y
