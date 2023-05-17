@@ -2,15 +2,52 @@
 ## Initialize stack and site (full reset)
 #
 ## Usage fin init
+################################## SETTINGS 
+source ${PROJECT_ROOT}/.docksal/bin/helpers
 
+
+################################## FUNCTIONS
 # REMOVE PROJECT
-fin project rm -f
+removeProject(){
+  echo-red "Remove Project"
+  fin project rm -f 
+}
 
 # START PROJECT
-fin project start
+startProject(){
+  echo-green-bg "Start Project..."
+  fin project start
+}
+
+installCerts(){
+  fin init/cert
+}
 
 # INSTALL PACKAGES FROM COMPOSER.JSON
-fin composer install
+installComposer(){
+  echo-green-bg "Install Vendor Packages..."
+  fin composer install
+}
 
 # RUN WORDPRESS INIT SCRIPT
-fin init/wp -y
+installWP(){
+  fin init/wp -y
+}
+
+projectInfo(){
+  echo-green-bg "Project Initialized!"
+  fin info
+}
+
+init(){
+  removeProject
+  startProject
+  installCerts
+  installComposer
+  installWP
+  projectInfo
+}
+################################## END: FUNCTIONS
+
+################################## EXECUTION 
+time init
