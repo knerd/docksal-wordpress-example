@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "66a9f5196108b14e5595b7a94fa2eb5d",
+    "content-hash": "ce642df074b843d136c956899d334f57",
     "packages": [
         {
             "name": "composer/installers",
@@ -12,12 +12,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/composer/installers.git",
-                "reference": "af93ba6e52236418f07a278033eba6959ee5b983"
+                "reference": "2a9170263fcd9cc4fd0b50917293c21d6c1a5bfe"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/composer/installers/zipball/af93ba6e52236418f07a278033eba6959ee5b983",
-                "reference": "af93ba6e52236418f07a278033eba6959ee5b983",
+                "url": "https://api.github.com/repos/composer/installers/zipball/2a9170263fcd9cc4fd0b50917293c21d6c1a5bfe",
+                "reference": "2a9170263fcd9cc4fd0b50917293c21d6c1a5bfe",
                 "shasum": ""
             },
             "require": {
@@ -106,6 +106,7 @@
                 "magento",
                 "majima",
                 "mako",
+                "matomo",
                 "mediawiki",
                 "miaoxing",
                 "modulework",
@@ -133,7 +134,7 @@
             ],
             "support": {
                 "issues": "https://github.com/composer/installers/issues",
-                "source": "https://github.com/composer/installers/tree/v2.1.1"
+                "source": "https://github.com/composer/installers/tree/main"
             },
             "funding": [
                 {
@@ -149,24 +150,24 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2022-04-13T09:13:00+00:00"
+            "time": "2022-10-12T12:07:30+00:00"
         },
         {
             "name": "johnpbloch/wordpress",
-            "version": "5.9.x-dev",
+            "version": "6.2.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/johnpbloch/wordpress.git",
-                "reference": "e140b6d496f7286c06470032382a528db64fd7cf"
+                "reference": "8054207cbc412fa8575bfc82d4d684f5f2063e3c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/johnpbloch/wordpress/zipball/e140b6d496f7286c06470032382a528db64fd7cf",
-                "reference": "e140b6d496f7286c06470032382a528db64fd7cf",
+                "url": "https://api.github.com/repos/johnpbloch/wordpress/zipball/8054207cbc412fa8575bfc82d4d684f5f2063e3c",
+                "reference": "8054207cbc412fa8575bfc82d4d684f5f2063e3c",
                 "shasum": ""
             },
             "require": {
-                "johnpbloch/wordpress-core": "5.9.x-dev",
+                "johnpbloch/wordpress-core": "6.2.1",
                 "johnpbloch/wordpress-core-installer": "^1.0 || ^2.0",
                 "php": ">=5.6.20"
             },
@@ -178,37 +179,37 @@
             "authors": [
                 {
                     "name": "WordPress Community",
-                    "homepage": "http://wordpress.org/about/"
+                    "homepage": "https://wordpress.org/about/"
                 }
             ],
             "description": "WordPress is open source software you can use to create a beautiful website, blog, or app.",
-            "homepage": "http://wordpress.org/",
+            "homepage": "https://wordpress.org/",
             "keywords": [
                 "blog",
                 "cms",
                 "wordpress"
             ],
             "support": {
-                "forum": "http://wordpress.org/support/",
+                "docs": "https://developer.wordpress.org/",
+                "forum": "https://wordpress.org/support/",
                 "irc": "irc://irc.freenode.net/wordpress",
-                "issues": "http://core.trac.wordpress.org/",
-                "source": "http://core.trac.wordpress.org/browser",
-                "wiki": "http://codex.wordpress.org/"
+                "issues": "https://core.trac.wordpress.org/",
+                "source": "https://core.trac.wordpress.org/browser"
             },
-            "time": "2022-01-04T21:10:00+00:00"
+            "time": "2023-05-16T16:54:51+00:00"
         },
         {
             "name": "johnpbloch/wordpress-core",
-            "version": "5.9.x-dev",
+            "version": "6.2.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/johnpbloch/wordpress-core.git",
-                "reference": "35a2b47e86c252986c1d7e5bfbd5b5959a116243"
+                "reference": "5c079d327a849f6ca05082a5099879f4ffc50597"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/johnpbloch/wordpress-core/zipball/35a2b47e86c252986c1d7e5bfbd5b5959a116243",
-                "reference": "35a2b47e86c252986c1d7e5bfbd5b5959a116243",
+                "url": "https://api.github.com/repos/johnpbloch/wordpress-core/zipball/5c079d327a849f6ca05082a5099879f4ffc50597",
+                "reference": "5c079d327a849f6ca05082a5099879f4ffc50597",
                 "shasum": ""
             },
             "require": {
@@ -216,7 +217,7 @@
                 "php": ">=5.6.20"
             },
             "provide": {
-                "wordpress/core-implementation": "5.9.x-dev"
+                "wordpress/core-implementation": "6.2.1"
             },
             "type": "wordpress-core",
             "notification-url": "https://packagist.org/downloads/",
@@ -243,7 +244,7 @@
                 "source": "https://core.trac.wordpress.org/browser",
                 "wiki": "https://codex.wordpress.org/"
             },
-            "time": "2022-05-04T11:49:03+00:00"
+            "time": "2023-05-16T16:54:48+00:00"
         },
         {
             "name": "johnpbloch/wordpress-core-installer",
@@ -301,36 +302,46 @@
         },
         {
             "name": "knerd/wp-config",
-            "version": "v1.0.0",
+            "version": "1.0.1",
             "source": {
                 "type": "git",
-                "url": "https://github.com/Knerd/wp-config.git",
-                "reference": "4502a75b212cf37926ed11f349351ddfb67951ce"
+                "url": "https://github.com/knerd/wp-config.git",
+                "reference": "35ab9d8f55b185b473f2710aca46a7ffaf4cb520"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Knerd/wp-config/zipball/4502a75b212cf37926ed11f349351ddfb67951ce",
-                "reference": "4502a75b212cf37926ed11f349351ddfb67951ce",
+                "url": "https://api.github.com/repos/knerd/wp-config/zipball/35ab9d8f55b185b473f2710aca46a7ffaf4cb520",
+                "reference": "35ab9d8f55b185b473f2710aca46a7ffaf4cb520",
                 "shasum": ""
             },
             "type": "library",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "xopherdeep",
+                    "email": "contact@midnightnerd.com"
+                }
+            ],
+            "description": "WP Config helper",
             "support": {
-                "source": "https://github.com/Knerd/wp-config/tree/v1.0.0",
-                "issues": "https://github.com/Knerd/wp-config/issues"
+                "source": "https://github.com/knerd/wp-config/tree/v1.0.1",
+                "issues": "https://github.com/knerd/wp-config/issues"
             },
-            "time": "2022-06-04T01:24:19+00:00"
+            "time": "2023-05-17T19:51:43+00:00"
         },
         {
             "name": "wpackagist-plugin/index-wp-mysql-for-speed",
-            "version": "1.4.4",
+            "version": "1.4.12",
             "source": {
                 "type": "svn",
                 "url": "https://plugins.svn.wordpress.org/index-wp-mysql-for-speed/",
-                "reference": "tags/1.4.4"
+                "reference": "tags/1.4.12"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/index-wp-mysql-for-speed.1.4.4.zip"
+                "url": "https://downloads.wordpress.org/plugin/index-wp-mysql-for-speed.1.4.12.zip"
             },
             "require": {
                 "composer/installers": "^1.0 || ^2.0"
@@ -340,15 +351,15 @@
         },
         {
             "name": "wpackagist-plugin/redis-cache",
-            "version": "2.0.26",
+            "version": "2.4.1",
             "source": {
                 "type": "svn",
                 "url": "https://plugins.svn.wordpress.org/redis-cache/",
-                "reference": "tags/2.0.26"
+                "reference": "tags/2.4.1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/redis-cache.2.0.26.zip"
+                "url": "https://downloads.wordpress.org/plugin/redis-cache.2.4.1.zip"
             },
             "require": {
                 "composer/installers": "^1.0 || ^2.0"
@@ -357,22 +368,22 @@
             "homepage": "https://wordpress.org/plugins/redis-cache/"
         },
         {
-            "name": "wpackagist-theme/twentytwentytwo",
-            "version": "1.2",
+            "name": "wpackagist-theme/twentytwentythree",
+            "version": "1.1",
             "source": {
                 "type": "svn",
-                "url": "https://themes.svn.wordpress.org/twentytwentytwo/",
-                "reference": "1.2"
+                "url": "https://themes.svn.wordpress.org/twentytwentythree/",
+                "reference": "1.1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/theme/twentytwentytwo.1.2.zip"
+                "url": "https://downloads.wordpress.org/theme/twentytwentythree.1.1.zip"
             },
             "require": {
                 "composer/installers": "^1.0 || ^2.0"
             },
             "type": "wordpress-theme",
-            "homepage": "https://wordpress.org/themes/twentytwentytwo/"
+            "homepage": "https://wordpress.org/themes/twentytwentythree/"
         }
     ],
     "packages-dev": [],
