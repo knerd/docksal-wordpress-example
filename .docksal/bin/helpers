@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+TIMEFORMAT="Done in %Rs(real)"
 
 # Console colors
 black='\033[0;30m'
@@ -50,17 +51,21 @@ function askQ(){
 }
 
 function askYN(){
-  Q=$1
+  Q="$1"
   Q=$(echo-green "? ${yellow} ${Q}? ${green}(y/n) ")
+  shift
+  CMD="$@"
   while true; do
     answer=$(askQ "$Q")
     echo ""
     case ${answer:0:1} in
         [Yy]*)
-          $2;
+          ${CMD}
           break;;
         [Nn]*) echo "No."; break;;
         *) echo "Sorry, what?" >&2
     esac
   done
 }
+
+LOGO=$(cat ${PROJECT_ROOT}/.docksal/bin/ascii)
