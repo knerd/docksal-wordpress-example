@@ -13,40 +13,47 @@
 
   new WP_Config([
     // CONFIG SCHEME & FILE STRUCTURE
-      'SITE_SCHEME'           => 'http',       //* WORDPRESS SITE SCHEME
-      'DIR'                   => __DIR__,       //* Current Directory
-      'DOCROOT'               => 'public',      //* PUBLIC DIRECTORY
-      'WP_CONTENT'            => 'wp-content',  //* WORDPRESS CONTENT DIRECTORY
-      'WP_DIR'                => '',            //* BLANK UNLESS WORDPRESS IS IN SUB DIRECTORY
-    // OFFICIAL WORDPRESS CONSTANTS
-      // DB SETTINGS
-      'DB_CHARSET'            => 'utf8',
-      'DB_COLLATE'            => '',
-      // DEFAULT DB CREDENTIALS
-      'DB_HOST'               => 'db',
-      'DB_NAME'               => 'default',
-      'DB_USER'               => 'user',
-      'DB_PASSWORD'           => 'user',
-      'DB_PREFIX'             => $table_prefix,
-      // Speed & Security
-      'COMPRESS_SCRIPTS'      => true,
-      'COMPRESS_CSS'          => true,
-      'ENFORCE_GZIP'          => true,
-      // 'FORCE_SSL_LOGIN'       => true,
-      // 'FORCE_SSL_ADMIN'       => true,
-      'WP_DEBUG'              => true,
-      'WP_CACHE'              => false,
-      'WPLANG'                => '',
-      'WP_MEMORY_LIMIT'       => '128M',
-      'WP_MAX_MEMORY_LIMIT'   => '256M',
-      'WP_POST_REVISIONS'     => 20,
-    // END: OFFICIAL
+    'SITE_SCHEME'           => 'https',       //* WORDPRESS SITE SCHEME
+    'DIR'                   => __DIR__,       //* PROJECT DIRECTORY
+    'DOCROOT'               => 'public',      //* PUBLIC DIRECTORY
+    'WP_DIR'                => '',            //* BLANK UNLESS WORDPRESS IS IN SUB DIRECTORY
+    'WP_CONTENT'            => 'wp-content',  //* WORDPRESS CONTENT DIRECTORY
 
-    // THIRD PARTIES
-      // Configure Redis host
-      'WP_REDIS_HOST'         => 'redis',
-      // Migrate Pro License 
-      'WPMDB_LICENCE'         => ''
+    // DATABASE SETTINGS
+    'DB_NAME'               => 'default',
+    'DB_USER'               => 'user',
+    'DB_PASSWORD'           => 'user',
+    'DB_HOST'               => 'db',
+    'DB_CHARSET'            => 'utf8',
+    'DB_COLLATE'            => '',
+    'DB_PREFIX'             => $table_prefix,
+
+    // SECURITY
+    'FORCE_SSL_LOGIN'       => true,
+    'FORCE_SSL_ADMIN'       => true,
+
+    // PERFORMANCE
+    'WP_MEMORY_LIMIT'       => '128M',
+    'WP_MAX_MEMORY_LIMIT'   => '256M',
+    'WP_POST_REVISIONS'     => 2,
+    'WP_CACHE'              => false,
+
+    // DEBUG
+    'WP_DEBUG'              => true,
+    'SCRIPT_DEBUG'          => true,
+
+    // SPEED
+    'ENFORCE_GZIP'          => true,
+    'CONCATENATE_SCRIPTS'   => false,
+    'COMPRESS_SCRIPTS'      => false,
+    'COMPRESS_CSS'          => false,
+
+    // LANGUAGE
+    'WPLANG'                => '',
+
+    // THIRD-PARTY INTEGRATIONS
+    'WP_REDIS_HOST'         => 'redis',
+    'WPMDB_LICENSE'         => ''
   ]);
 
   /* That's all, stop editing! Happy blogging. */
