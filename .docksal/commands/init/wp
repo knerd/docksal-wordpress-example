@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 ## Install WordPress, Activate Plugins, Optimize setup
 #
-## Usage fin init.wp
+## Usage fin init/wp
 
 #-------------------------- Helper functions --------------------------------
   source ${PROJECT_ROOT}/.docksal/bin/helpers
@@ -18,17 +18,21 @@ PASS=password
 #-------------------------- FUNCTIONS --------------------------------
   function wpCoreInstall(){
     # INSTALL WORDPRESS
+    echo-green-bg "Install WordPress..."
     fin wp core install --url="${HOST}" --title="${TITLE}" --admin_user="${ADMIN}" --admin_email="${EMAIL}" --admin_password="${PASS}"
   }
 
   function optimizeWP(){
     # ACTIVATE PLUGINS 
+    echo-green-bg "Activate Plugins..."
     fin wp plugin activate redis-cache index-wp-mysql-for-speed
 
+    echo-green-bg "Enable Redis..."
     # ENABLE REDIS CACHE
     fin wp redis enable
     fin wp redis status 
 
+    echo-green-bg "Optimize DB..."
     # OPTIMIZE DB W/ HIGH PERFORMANCE KEYS
     fin wp index-mysql enable --all 
     fin wp index-mysql status 
@@ -41,7 +45,4 @@ PASS=password
 
   Q="Do you want to optimize WordPress"
   askYN "$Q" optimizeWP 
-
-  Q="Do you want to install & sign local SSL certs"
-  askYN "$Q" "fin init.cert" 
 #-------------------------- END: EXECUTION --------------------------------
